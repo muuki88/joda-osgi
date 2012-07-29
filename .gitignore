@@ -1,0 +1,13 @@
+## maven
+
+target/
+
+## eclipse
+.project
+.classpath
+.settings
+
+bin/
+
+## generated
+.class

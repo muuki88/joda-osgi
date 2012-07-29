@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.joda</groupId>
+  <artifactId>joda-osgi</artifactId>
+  <version>0.0.1</version>
+  <packaging>pom</packaging>
+  <properties>
+    <tycho.version>0.15.0</tycho.version>
+  </properties>
+  <modules>
+    <!--<module>joda-time</module>
+    <module>joda-convert</module> -->
+    <module>joda-time-feature</module>
+    <module>joda-convert-feature</module>
+    <module>joda-site</module>
+  </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho.version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+          <artifactId>target-platform-configuration</artifactId>
+          <version>${tycho.version}</version>
+          <configuration>
+            <pomDependencies>consider</pomDependencies>
+          </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.joda</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.1</version>
+      <scope>compile</scope>
+      <optional>true</optional><!-- mandatory in Scala -->
+    </dependency>
+    <dependency>
+      <groupId>org.joda</groupId>
+      <artifactId>joda-convert</artifactId>
+      <version>1.2</version>
+      <scope>compile</scope>
+      <optional>true</optional><!-- mandatory in Scala -->
+    </dependency>
+  </dependencies>
+
+  <pluginRepositories>
+    <pluginRepository>
+       <id>tycho-snapshots</id>
+       <url>https://oss.sonatype.org/content/groups/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+</project>
