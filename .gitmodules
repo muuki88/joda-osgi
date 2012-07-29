@@ -1,6 +1,0 @@
-[submodule "joda-time"]
-	path = joda-time
-	url = git://github.com/JodaOrg/joda-time.git
-[submodule "joda-convert"]
-	path = joda-convert
-	url = git://github.com/JodaOrg/joda-convert.git
