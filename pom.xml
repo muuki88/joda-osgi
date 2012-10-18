@@ -17,6 +17,21 @@
     <module>joda-site</module>
   </modules>
 
+  <distributionManagement>
+        <!-- use the following if you're not using a snapshot version. -->
+    <repository>
+      <id>nexus</id>
+      <name>RepositoryProxy</name>
+      <url>http://metropolis:8081/nexus/content/repositories/thirdparty</url>
+    </repository>
+        <!-- use the following if you ARE using a snapshot version. -->
+    <snapshotRepository>
+      <id>nexus</id>
+      <name>RepositoryProxy</name>
+      <url>http://metropolis:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <build>
     <plugins>
       <plugin>
