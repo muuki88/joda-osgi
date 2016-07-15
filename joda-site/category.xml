@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.joda.convert.feature_1.2.0.jar" id="org.joda.convert.feature" version="1.2.0">
+   <feature id="org.joda.convert.feature">
       <category name="org.joda"/>
    </feature>
-   <feature url="features/org.joda.time.feature_2.1.0.jar" id="org.joda.time.feature" version="2.1.0">
+   <feature id="org.joda.time.feature">
       <category name="org.joda"/>
    </feature>
    <category-def name="org.joda" label="Joda"/>
